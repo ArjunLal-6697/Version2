@@ -22,9 +22,9 @@ const customerSchema = new mongoose.Schema({
     type: 'string',
     required: true,
   },
-  is_admin: {
-    type: 'number',
-    require: true,
+  Admin: {
+    type: 'boolean',
+    default: false,
   },
 });
 

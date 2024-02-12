@@ -21,7 +21,7 @@ exports.postRegister = async (req, res, next) => {
       tel,
       email,
       password: hashedPassword,
-      is_admin: 0,
+      Admin: false,
     });
 
     // Email is already registered

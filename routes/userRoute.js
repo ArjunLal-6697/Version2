@@ -1,4 +1,3 @@
-//Router
 const express = require('express');
 const userRoute = express();
 const session = require('express-session');
@@ -36,6 +35,7 @@ userRoute.use(bodyParser.urlencoded({ extended: true }));
 // Use setNoCache middleware for all routes
 userRoute.use(setNoCache);
 
+//Import UserController.js
 userRoute.get('/register', authenticateLoggedOut, userController.getRegister);
 userRoute.post('/register', authenticateLoggedOut, userController.postRegister);
 userRoute.get('/login', authenticateLoggedOut, userController.getLogin);

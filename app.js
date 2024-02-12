@@ -17,6 +17,10 @@ app.use(express.static('public'));
 const userRoute = require('./routes/userRoute');
 app.use('/', userRoute);
 
+//For admin routes
+const adminRoute = require('./routes/adminRoute');
+app.use('/admin', adminRoute);
+
 //Server
 app.listen(3000, () => {
   console.log(`Server is listening`);
